@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Route to articles Api
 Route::get('articles', function()
 {
     return response()->json([
@@ -23,6 +24,7 @@ Route::get('articles', function()
 
 });
 
+// Route to categories Api
 Route::get('categories', function()
 {
     return response()->json([
@@ -32,6 +34,7 @@ Route::get('categories', function()
 
 });
 
+// Route to tags Api
 Route::get('tags', function()
 {
     return response()->json([

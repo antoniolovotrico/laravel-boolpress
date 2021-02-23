@@ -17,6 +17,10 @@ class PageController extends Controller
     public function contact(){
         $menu_link = config('nav_menu_links');
         return view('contact', compact('menu_link'));
-    }    
+    }
+    public function articles_api(){
+        $menu_link = config('nav_menu_links');
+        return view('spa.articles', compact('menu_link'));
+    }     
 }
 
