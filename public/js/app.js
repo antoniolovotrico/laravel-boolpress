@@ -1969,8 +1969,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -37652,15 +37650,15 @@ var render = function() {
         _vm._l(_vm.articles, function(article) {
           return _c("div", { key: article.id, staticClass: "card" }, [
             _c("div", { staticClass: "card-header" }, [
-              _vm._v(_vm._s(article.title))
+              _vm._v("TITLE : " + _vm._s(article.title))
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "card-header" }, [
+              _vm._v("BODY : " + _vm._s(article.body))
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "card-body" }, [
-              _vm._v(
-                "\n                    " +
-                  _vm._s(article.author) +
-                  "\n                "
-              )
+              _vm._v("AUTHOR : " + _vm._s(article.author))
             ])
           ])
         }),

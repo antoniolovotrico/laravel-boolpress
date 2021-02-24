@@ -11093,3 +11093,7 @@ body .active {
   border-bottom: 4px solid #011941;
 }
 
+.card {
+  padding: 20px;
+}
+

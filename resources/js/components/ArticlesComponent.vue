@@ -3,11 +3,9 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card" v-for="article in articles" :key="article.id">
-                    <div class="card-header">{{article.title}}</div>
-
-                    <div class="card-body">
-                        {{article.author}}
-                    </div>
+                    <div class="card-header">TITLE : {{article.title}}</div>
+                    <div class="card-header">BODY : {{article.body}}</div>
+                    <div class="card-body">AUTHOR : {{article.author}}</div>
                 </div>
             </div>
         </div>
