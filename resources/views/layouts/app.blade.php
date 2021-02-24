@@ -4,7 +4,8 @@
 <main>
     @yield('main_content')
 </main> 
-<script src="{{ asset('js/app.js') }}"></script>
+    @yield('scriptJs')
+
 </body>
 </html>          
 

@@ -14,7 +14,9 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        //
+        $menu_link = config('nav_menu_links');
+        $articles = Article::latest()->get();
+        return view('articles.index', compact('articles', 'menu_link'));
     }
 
     /**
@@ -24,7 +26,8 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        //
+        $menu_link = config('nav_menu_links');
+        return view('articles.create', compact('menu_link'));
     }
 
     /**
@@ -35,7 +38,12 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $newArticle = new Article;
+        $newArticle -> title = request('title');
+        $newArticle -> body = request('body');
+        $newArticle -> save();
+
+        return redirect()-> route('articles.index');
     }
 
     /**
@@ -46,7 +54,8 @@ class ArticleController extends Controller
      */
     public function show(Article $article)
     {
-        //
+        $menu_link = config('nav_menu_links');
+        return view('articles.show', compact('article', 'menu_link'));
     }
 
     /**
@@ -57,7 +66,8 @@ class ArticleController extends Controller
      */
     public function edit(Article $article)
     {
-        //
+        $menu_link = config('nav_menu_links');
+        return view('articles.edit', compact('article', 'menu_link'));
     }
 
     /**
@@ -69,7 +79,9 @@ class ArticleController extends Controller
      */
     public function update(Request $request, Article $article)
     {
-        //
+        $data = $request -> all();
+        $article -> update($data);
+        return redirect()-> route('articles.index');
     }
 
     /**
@@ -80,6 +92,7 @@ class ArticleController extends Controller
      */
     public function destroy(Article $article)
     {
-        //
+        $article->delete();
+        return redirect()-> route('articles.index');
     }
 }
