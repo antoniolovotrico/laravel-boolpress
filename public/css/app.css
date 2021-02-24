@@ -10944,3 +10944,152 @@ a.text-dark:focus {
   }
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "nunito", "sanserif";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100vw;
+}
+
+body header {
+  width: 80%;
+  flex-basis: 10%;
+}
+
+body header ul {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+body header ul li {
+  width: 50%;
+}
+
+body header ul li a {
+  text-decoration: none;
+  margin: 20px;
+  font-size: 1.4rem;
+  color: green;
+  text-transform: capitalize;
+}
+
+body header ul li a:hover {
+  color: #011941;
+  text-decoration: none;
+  border-bottom: 4px solid #011941;
+  transform: scale(1.15);
+  transition: ease-in-out 1s;
+}
+
+body main {
+  width: 80%;
+  flex-basis: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+body main h1 {
+  padding: 20px;
+}
+
+body main table {
+  width: 100%;
+  height: 100%;
+}
+
+body main table tr {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+body main table .id {
+  width: 2%;
+}
+
+body main table .title {
+  width: 10%;
+  padding: 10px;
+}
+
+body main table .body {
+  width: 50%;
+  padding: 10px;
+}
+
+body main table .created {
+  width: 10%;
+  padding: 10px;
+}
+
+body main table .created {
+  width: 10%;
+  padding: 10px;
+}
+
+body main table .action {
+  width: 18%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+body main table .action button {
+  padding: 8px;
+}
+
+body main table .action form {
+  width: 25%;
+}
+
+body main form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: space-around;
+}
+
+body main form label {
+  margin: 20px;
+  font-size: 2rem;
+}
+
+body main form #input_title {
+  width: 30%;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  padding: 20px;
+}
+
+body main form #input_body {
+  width: 80%;
+  height: 100px;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  padding: 20px;
+}
+
+body main #create_btn {
+  width: 20%;
+  padding: 10px;
+}
+
+body .active {
+  color: #011941;
+  border-bottom: 4px solid #011941;
+}
+
