@@ -1969,10 +1969,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      articles: ""
+      articles: "",
+      categories: ""
     };
   },
   mounted: function mounted() {
@@ -1980,8 +1982,22 @@ __webpack_require__.r(__webpack_exports__);
 
     console.log('Component mounted.');
     axios.get('api/articles').then(function (response) {
-      console.log(response.data.data);
       _this.articles = response.data.data;
+    })["catch"](function (error) {//console.log(error);
+    });
+    axios.get('api/categories').then(function (response) {
+      _this.categories = response.data.data; //console.log(category);
+
+      _this.articles.forEach(function (article, i) {
+        //console.log(article.category_id);
+        _this.categories.forEach(function (element) {
+          if (article.category_id == element.id) {
+            _this.$set(_this.articles[i], "category_name", element.title);
+          }
+        });
+      });
+
+      console.log(_this.articles);
     })["catch"](function (error) {
       console.log(error);
     });
@@ -37739,12 +37755,16 @@ var render = function() {
               _vm._v("TITLE : " + _vm._s(article.title))
             ]),
             _vm._v(" "),
+            _c("div", { staticClass: "card-body" }, [
+              _vm._v("AUTHOR : " + _vm._s(article.author))
+            ]),
+            _vm._v(" "),
             _c("div", { staticClass: "card-header" }, [
               _vm._v("BODY : " + _vm._s(article.body))
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "card-body" }, [
-              _vm._v("AUTHOR : " + _vm._s(article.author))
+              _vm._v("Category : " + _vm._s(article.category_name))
             ])
           ])
         }),
