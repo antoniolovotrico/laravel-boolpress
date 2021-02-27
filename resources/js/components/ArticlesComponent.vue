@@ -25,6 +25,7 @@
             axios.get('api/articles').then(response => {
                 console.log(response.data.data);
                 this.articles =response.data.data;
+            
             }).catch(error => {
                 console.log(error);
             })

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Article;
+use App\Tag;
+use App\Category;
 use Illuminate\Http\Request;
 
 class ArticleController extends Controller
@@ -27,7 +29,9 @@ class ArticleController extends Controller
     public function create()
     {
         $menu_link = config('nav_menu_links');
-        return view('articles.create', compact('menu_link'));
+        $tags = Tag::all();
+        $categories = Category::all();
+        return view('articles.create', compact('menu_link','tags','categories'));
     }
 
     /**
@@ -38,12 +42,27 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        $newArticle = new Article;
-        $newArticle -> title = request('title');
-        $newArticle -> body = request('body');
-        $newArticle -> save();
+        
+        // creiamo la validazione creando una variabile per salvarvi all'interno i dati validati
+        $validated_data = $request->validate([
+            'title' => 'required',
+            'body' => 'required',
+            'category_id' => 'required',
+            'tag' => 'exists:tags, id'
+        ]);
 
-        return redirect()-> route('articles.index');
+           
+        // $newArticle = new Article;
+        // $newArticle -> title = request('title');
+        // $newArticle -> body = request('body');
+        // $newArticle -> save();
+        
+        Article::create($validated_data);
+        
+        $article = Article::orderBy('id','desc')->first();
+        $article->tags()->attach($request->tags);
+        
+        return redirect()->route('articles.index');
     }
 
     /**
@@ -67,7 +86,9 @@ class ArticleController extends Controller
     public function edit(Article $article)
     {
         $menu_link = config('nav_menu_links');
-        return view('articles.edit', compact('article', 'menu_link'));
+        $tags = Tag::all();
+        $categories = Category::all();
+        return view('articles.edit', compact('article','menu_link','tags','categories'));
     }
 
     /**
@@ -79,8 +100,15 @@ class ArticleController extends Controller
      */
     public function update(Request $request, Article $article)
     {
-        $data = $request -> all();
-        $article -> update($data);
+         // creiamo la validazione creando una variabile per salvarvi all'interno i dati validati
+         $validated_data = $request->validate([
+            'title' => 'required',
+            'body' => 'required',
+            'category_id' => 'required',
+            'tag' => 'exists:tags, id'
+        ]);
+        // $data = $request -> all();
+        $article -> update($validated_data);
         return redirect()-> route('articles.index');
     }
 
