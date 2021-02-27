@@ -31,6 +31,7 @@ Show Article
                 @else
                     Non ho inserito nessun tag
                 @endif
+            </td>
         </tr>     
     </tbody>
 </table>

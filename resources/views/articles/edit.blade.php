@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title')
-Show Article
+Edit Article
 @endsection
 @section('main_content')
 <h1>Edit {{ $article -> title }}</h1>

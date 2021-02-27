@@ -21,6 +21,14 @@ class PageController extends Controller
     public function articles_api(){
         $menu_link = config('nav_menu_links');
         return view('spa.articles', compact('menu_link'));
-    }     
+    } 
+    public function categories_api(){
+        $menu_link = config('nav_menu_links');
+        return view('spa.categories', compact('menu_link'));
+    }
+    public function tags_api(){
+        $menu_link = config('nav_menu_links');
+        return view('spa.tags', compact('menu_link'));
+    }    
 }
 

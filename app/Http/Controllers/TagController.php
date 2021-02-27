@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Article;
+use App\Category;
 use App\Tag;
 use Illuminate\Http\Request;
 
@@ -14,7 +16,9 @@ class TagController extends Controller
      */
     public function index()
     {
-        //
+        $menu_link = config('nav_menu_links');
+        $tags = Tag::all();
+        return view('tags.index', compact('tags', 'menu_link'));
     }
 
     /**
@@ -24,7 +28,8 @@ class TagController extends Controller
      */
     public function create()
     {
-        //
+        $menu_link = config('nav_menu_links');
+        return view('tags.create', compact('menu_link'));
     }
 
     /**
@@ -35,7 +40,12 @@ class TagController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validated_data = $request->validate([
+            'title' => 'required',
+        ]);
+        Tag::create($validated_data);
+        $tag = Tag::orderBy('id','desc')->first();
+        return redirect()->route('tags.index');
     }
 
     /**
@@ -46,7 +56,8 @@ class TagController extends Controller
      */
     public function show(Tag $tag)
     {
-        //
+        $menu_link = config('nav_menu_links');
+        return view('tags.show', compact('tag', 'menu_link'));
     }
 
     /**
@@ -57,7 +68,8 @@ class TagController extends Controller
      */
     public function edit(Tag $tag)
     {
-        //
+        $menu_link = config('nav_menu_links');
+        return view('tags.edit', compact('menu_link','tag'));
     }
 
     /**
@@ -69,7 +81,12 @@ class TagController extends Controller
      */
     public function update(Request $request, Tag $tag)
     {
-        //
+        $validated_data = $request->validate([
+            'title' => 'required'
+        ]);
+        
+        $tag -> update($validated_data);
+        return redirect()-> route('tags.index');
     }
 
     /**
@@ -80,6 +97,7 @@ class TagController extends Controller
      */
     public function destroy(Tag $tag)
     {
-        //
+        $tag->delete();
+        return redirect()-> route('tags.index');
     }
 }

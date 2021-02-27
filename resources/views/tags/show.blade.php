@@ -1,22 +1,21 @@
 @extends('layouts.app')
 @section('title')
-Show Category
+Show Tag
 @endsection
 @section('main_content')
-<h1>Show Category</h1>   
+<h1>Show Tag</h1>   
 <table>
     <thead>
         <tr>
             <th class="id">ID</th>
             <th class="title">Title</th>
             <th class="created">Created</th>
-        </tr>
     </thead>
     <tbody>
         <tr>
-            <td class="id">{{ $category -> id  }}</td>
-            <td class="title">{{ $category -> title  }}</td>
-            <td class="created">{{ $category -> created_at  }}</td>
+            <td class="id">{{ $tag -> id  }}</td>
+            <td class="title">{{ $tag -> title  }}</td>
+            <td class="created">{{ $tag -> created_at  }}</td>     
         </tr>     
     </tbody>
 </table>

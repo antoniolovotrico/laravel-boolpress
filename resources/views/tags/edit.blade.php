@@ -1,14 +1,14 @@
 @extends('layouts.app')
 @section('title')
-Edit Category
+Edit Tag
 @endsection
 @section('main_content')
-<h1>Edit {{ $category -> title }}</h1>
-        <form action="{{ route('categories.update', ['category'=> $category -> id])}}" method="post">
+<h1>Edit {{ $tag -> title }}</h1>
+        <form action="{{ route('tags.update', ['tag'=> $tag -> id])}}" method="post">
             @csrf
             @method('Put')
             <label for="title">Title</label>
-            <input id="input_title" type="text" name="title" value="{{ $category -> title }}">
+            <input id="input_title" type="text" name="title" value="{{ $tag -> title }}">
             <button id="create_btn" type="submit">Edit</button>
         </form>
 @endsection
