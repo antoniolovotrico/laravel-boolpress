@@ -50,28 +50,36 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
   background-color: white;
   overflow-y: scroll;
 }
 
 main h1 {
-  padding: 20px;
+  width: 100%;
+  height: 10%;
+  padding: 20px 0;
 }
 
 main table {
   width: 100%;
-  height: 100%;
+  height: 90%;
 }
 
 main table tr {
   width: 100%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   align-items: center;
+  min-height: 80px;
 }
 
 main table tr th {
   text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 main table tr td {
@@ -84,27 +92,22 @@ main table .id {
 
 main table .title {
   width: 10%;
-  padding: 10px;
 }
 
 main table .body {
-  width: 50%;
-  padding: 10px;
+  width: 40%;
 }
 
 main table .created {
   width: 10%;
-  padding: 10px;
 }
 
-main table .created {
+main table .updated {
   width: 10%;
-  padding: 10px;
 }
 
 main table .action {
   width: 18%;
-  padding: 10px;
   display: flex;
   justify-content: space-around;
 }
@@ -114,7 +117,11 @@ main table .action button {
 }
 
 main table .action form {
-  width: 25%;
+  width: 30%;
+}
+
+main table .action a {
+  width: 30%;
 }
 
 main form {
@@ -145,9 +152,55 @@ main form #input_body {
   padding: 20px;
 }
 
+main .view_btn,
+main .edit_btn,
+main .delete_btn {
+  box-shadow: 0 0 2px 2px lightgrey;
+  color: white;
+  width: 100%;
+  border: 0;
+  border-radius: 5%;
+}
+
+main .view_btn:hover,
+main .edit_btn:hover,
+main .delete_btn:hover {
+  box-shadow: 0 0 10px grey;
+  transition: ease-in-out 0.5s;
+  transform: scale(1.1);
+  background-color: #513e5e;
+  cursor: pointer;
+}
+
+main .view_btn {
+  background-color: green;
+}
+
+main .edit_btn {
+  background-color: goldenrod;
+}
+
+main .delete_btn {
+  background-color: red;
+}
+
 main #create_btn {
   width: 20%;
   padding: 10px;
+  background-color: darkblue;
+  box-shadow: 0 0 2px 2px lightgrey;
+  color: white;
+  border: 0;
+  border-radius: 5%;
+  margin: 50px 0;
+}
+
+main #create_btn:hover {
+  box-shadow: 0 0 10px grey;
+  transition: ease-in-out 0.5s;
+  transform: scale(1.1);
+  background-color: #513e5e;
+  cursor: pointer;
 }
 
 footer {
@@ -186,6 +239,27 @@ footer ul li a:hover {
   border-bottom: 4px solid #011941;
   transform: scale(1.15);
   transition: ease-in-out 1s;
+}
+
+#app,
+template {
+  width: 100%;
+}
+
+#app .card_container,
+template .card_container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+#app .card_container .card,
+template .card_container .card {
+  margin: 20px;
+  width: 20%;
+  min-width: 200px;
 }
 
 /*!
@@ -11151,9 +11225,5 @@ body {
 body .active {
   color: #011941;
   border-bottom: 4px solid #011941;
-}
-
-body .card {
-  padding: 20px;
 }
 

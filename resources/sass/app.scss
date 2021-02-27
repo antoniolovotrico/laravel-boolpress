@@ -6,6 +6,7 @@
 @import 'partials/header';
 @import 'partials/main';
 @import 'partials/footer';
+@import 'partials/template';
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
@@ -27,9 +28,6 @@ body{
     .active{
         color: $bars_color;
         border-bottom: 4px solid $bars_color;
-    }
-    .card{
-        padding: 20px;
     }
 }
 

@@ -15,6 +15,8 @@ class ArticleSeeder extends Seeder
     {
         for ($i=0; $i < 20; $i++) { 
            $newArticle = new Article();
+        //    $newArticle -> tag_id = $faker->numberBetween(1, 20);
+        //    $newArticle -> category_id = $faker->numberBetween(1, 20);
            $newArticle -> title = $faker->word();
            $newArticle -> body = $faker->sentence();
            $newArticle -> author = $faker->name();

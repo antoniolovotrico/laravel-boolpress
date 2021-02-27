@@ -3,9 +3,8 @@
 articles
 @endsection
 @section('main_content')
-<div class="main_container">
-   <h1>Articles</h1>
-</div>
+<h1>Articles</h1>
+
 
 <div id="app">
    <articles-component></articles-component>

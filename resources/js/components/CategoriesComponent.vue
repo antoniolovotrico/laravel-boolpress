@@ -1,12 +1,8 @@
 <template>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card" v-for="category in categories" :key="category.id">
-                    <div class="card-header">TITLE : {{category.title}}</div>
-                    <div class="card-body">ID : {{category.id}}</div>
-                </div>
-            </div>
+    <div class="card_container">
+        <div class="card" v-for="category in categories" :key="category.id">
+            <div class="card-header">TITLE : {{category.title}}</div>
+            <div class="card-body">ID : {{category.id}}</div>
         </div>
     </div>
 </template>

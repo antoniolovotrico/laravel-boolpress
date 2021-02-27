@@ -3,22 +3,30 @@ main{
     height: 80%; 
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly; 
+    justify-content: space-evenly;
+    align-items: center; 
+    text-align: center;
     background-color: white;
     overflow-y: scroll;
     h1{
-        padding: 20px;
+        width: 100%;
+        height: 10%;
+        padding: 20px 0;
     }  
     table{
         width: 100%;
-        height: 100%;
+        height: 90%;
         tr{
             width: 100%;
             display: flex;
-            justify-content: flex-start;
+            justify-content: space-evenly;
             align-items: center;
+            min-height: 80px;
             th{
                 text-align: center;
+                font-size: 1.2rem;
+                font-weight: 600;
+                text-transform: uppercase;
             }
             td{
                 text-align: center;
@@ -30,30 +38,28 @@ main{
         }
         .title{
             width: 10%;
-            padding: 10px;
         }
         .body{
-            width: 50%;
-            padding: 10px;
+            width: 40%;
         }
         .created{
             width: 10%;
-            padding: 10px;
         }
-        .created{
+        .updated{
             width: 10%;
-            padding: 10px;
         }
         .action{
             width: 18%;
-            padding: 10px;
             display: flex;
             justify-content: space-around;
             button{
                 padding: 8px;
             }
             form{
-                width: 25%;
+                width: 30%;
+            }
+            a{
+                width: 30%;
             }
         }
     }
@@ -81,8 +87,44 @@ main{
             padding: 20px;   
         }
     }
+    .view_btn, .edit_btn, .delete_btn{
+        box-shadow: 0 0 2px 2px lightgrey;
+        color: white;
+        width: 100%;
+        border: 0;
+        border-radius: 5%;
+        &:hover{
+            box-shadow: 0 0 10px grey;
+            transition: ease-in-out 0.5s;
+            transform: scale(1.10);
+            background-color: #513e5e;
+            cursor: pointer; 
+        }
+    }
+    .view_btn{
+        background-color: green;
+    }
+    .edit_btn{
+        background-color: goldenrod;
+    }
+    .delete_btn{
+        background-color: red;
+    }
     #create_btn{
         width: 20%;   
         padding: 10px;
+        background-color: darkblue;
+        box-shadow: 0 0 2px 2px lightgrey;
+        color: white;
+        border: 0;
+        border-radius: 5%;
+        margin: 50px 0;
+        &:hover{
+            box-shadow: 0 0 10px grey;
+            transition: ease-in-out 0.5s;
+            transform: scale(1.10);
+            background-color: #513e5e;
+            cursor: pointer; 
+        }
     }
 }

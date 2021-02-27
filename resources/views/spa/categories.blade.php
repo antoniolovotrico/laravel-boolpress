@@ -3,9 +3,8 @@
 categoriesApi
 @endsection
 @section('main_content')
-<div class="main_container">
-   <h1>CategoriesApi</h1>
-</div>
+<h1>CategoriesApi</h1>
+
 
 <div id="app">
    <categories-component></categories-component>

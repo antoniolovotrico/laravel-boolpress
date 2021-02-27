@@ -3,9 +3,7 @@
 TagsApi
 @endsection
 @section('main_content')
-<div class="main_container">
-   <h1>TagsApi</h1>
-</div>
+<h1>TagsApi</h1>
 
 <div id="app">
    <tags-component></tags-component>

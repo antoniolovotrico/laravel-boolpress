@@ -26,15 +26,15 @@ tags
               <td class="updated">{{ $tag -> updated_at  }}</td>
               <td class="action">
                  <a href="{{ route('tags.show', ['tag' => $tag -> id]) }}">
-                      <button>View</button>
+                      <button class="view_btn">View</button>
                   </a> 
                   <a href="{{ route('tags.edit', ['tag' => $tag -> id]) }}">
-                      <button>Edit</button>
+                      <button class="edit_btn">Edit</button>
                   </a>
                   <form action="{{ route('tags.destroy', ['tag' => $tag -> id]) }}" method="POST">
                       @csrf
                       @method('DELETE')
-                      <button>Delete</button>
+                      <button class="delete_btn">Delete</button>
                   </form>
               </td>
           </tr>     

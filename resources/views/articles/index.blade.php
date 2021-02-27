@@ -4,7 +4,7 @@ articles
 @endsection
 @section('main_content')
 <div class="main_container">
-   <h1>articles</h1>
+   <h1>Articles</h1>
    <table>
       <thead>
           <tr>
@@ -26,15 +26,15 @@ articles
               <td class="updated">{{ $item -> updated_at  }}</td>
               <td class="action">
                   <a href="{{ route('articles.show', ['article' => $item -> id]) }}">
-                      <button>View</button>
+                      <button class="view_btn">View</button>
                   </a>
                   <a href="{{ route('articles.edit', ['article' => $item -> id]) }}">
-                      <button>Edit</button>
+                      <button class="edit_btn">Edit</button>
                   </a>
                   <form action="{{ route('articles.destroy', ['article' => $item -> id]) }}" method="POST">
                       @csrf
                       @method('DELETE')
-                      <button>Delete</button>
+                      <button class="delete_btn">Delete</button>
                   </form>   
               </td>
           </tr>     
