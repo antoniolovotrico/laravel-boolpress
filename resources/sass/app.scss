@@ -1,8 +1,11 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
-// Variables
-@import 'variables';
+// Partials
+@import 'partials/variables';
+@import 'partials/header';
+@import 'partials/main';
+@import 'partials/footer';
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
@@ -18,126 +21,19 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100%;
-    width: 100vw;
-    header{
-        width: 80%;
-        flex-basis: 10%;
-        ul{
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-            list-style: none;
-            li{
-                width: 100%;
-                a{
-                    text-decoration: none;
-                    margin: 20px;
-                    font-size: 1.4rem;
-                    color: green;
-                    text-transform: capitalize;
-                    &:hover{
-                        color: $bars_color;
-                        text-decoration: none;
-                        border-bottom: 4px solid $bars_color;
-                        transform: scale(1.15);
-                        transition: ease-in-out 1s;
-                    } 
-                }
-            }
-        }
-    }
-    main{
-        width: 80%;
-        flex-basis: 70%; 
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly; 
-        h1{
-            padding: 20px;
-        }  
-        table{
-            width: 100%;
-            height: 100%;
-            tr{
-                width: 100%;
-                display: flex;
-                justify-content: flex-start;
-                align-items: center;
-                
-            }
-            .id{
-                width: 2%;
-
-            }
-            .title{
-                width: 10%;
-                padding: 10px;
-            }
-            .body{
-                width: 50%;
-                padding: 10px;
-            }
-            .created{
-                width: 10%;
-                padding: 10px;
-            }
-            .created{
-                width: 10%;
-                padding: 10px;
-            }
-            .action{
-                width: 18%;
-                padding: 10px;
-                display: flex;
-                justify-content: space-around;
-                button{
-                    padding: 8px;
-                }
-                form{
-                    width: 25%;
-                }
-            }
-        }
-        form{
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            height: 100%;
-            justify-content: space-around;
-            label{
-                margin: 20px;
-                font-size: 2rem;
-            }
-            #input_title{
-                width: 30%;
-                margin-top: 10px;
-                margin-bottom: 40px;
-                padding: 20px;   
-            }
-            #input_body{
-                width: 80%;
-                height: 100px;
-                margin-top: 10px;
-                margin-bottom: 40px;
-                padding: 20px;   
-            }
-        }
-        #create_btn{
-            width: 20%;   
-            padding: 10px;
-        }
-    }
+    height: 100vh;
+    width: 100vw; 
+    background-color: bisque;
     .active{
         color: $bars_color;
         border-bottom: 4px solid $bars_color;
     }
-}
-
     .card{
         padding: 20px;
     }
+}
+
+   
 
 
 

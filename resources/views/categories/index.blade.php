@@ -24,16 +24,16 @@ categories
               <td class="updated">{{ $category -> updated_at  }}</td>
               <td class="action">
                   <a href="{{ route('categories.show', ['category' => $category -> id]) }}">
-                      <button>View</button>
+                      <button id="view_btn">View</button>
                   </a>
                    
                   <a href="{{ route('categories.edit', ['category' => $category -> id]) }}">
-                      <button>Edit</button>
+                      <button id="edit_btn">Edit</button>
                   </a>
                   <form action="{{ route('categories.destroy', ['category' => $category -> id]) }}" method="POST">
                       @csrf
                       @method('DELETE')
-                      <button>Delete</button>
+                      <button id="delete_btn">Delete</button>
                   </form>
               </td>
           </tr>     

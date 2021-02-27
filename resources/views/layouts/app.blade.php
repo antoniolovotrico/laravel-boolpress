@@ -4,9 +4,9 @@
 <main>
     @yield('main_content')
 </main> 
-    @yield('scriptJs')
+@include('layouts.footer')
+   
 
-</body>
-</html>          
+         
 
        

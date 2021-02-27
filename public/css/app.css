@@ -1,5 +1,193 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
 
+header {
+  width: 80%;
+  height: 10%;
+  background-color: #6cb2eb;
+}
+
+header nav {
+  width: 100%;
+  height: 100%;
+}
+
+header nav ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+}
+
+header nav ul li {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  margin: 20px;
+  font-size: 1.4rem;
+  color: green;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+header nav ul li a:hover {
+  color: #011941;
+  text-decoration: none;
+  border-bottom: 4px solid #011941;
+  transform: scale(1.15);
+  transition: ease-in-out 1s;
+}
+
+main {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: white;
+  overflow-y: scroll;
+}
+
+main h1 {
+  padding: 20px;
+}
+
+main table {
+  width: 100%;
+  height: 100%;
+}
+
+main table tr {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+main table tr th {
+  text-align: center;
+}
+
+main table tr td {
+  text-align: center;
+}
+
+main table .id {
+  width: 2%;
+}
+
+main table .title {
+  width: 10%;
+  padding: 10px;
+}
+
+main table .body {
+  width: 50%;
+  padding: 10px;
+}
+
+main table .created {
+  width: 10%;
+  padding: 10px;
+}
+
+main table .created {
+  width: 10%;
+  padding: 10px;
+}
+
+main table .action {
+  width: 18%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+main table .action button {
+  padding: 8px;
+}
+
+main table .action form {
+  width: 25%;
+}
+
+main form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: space-around;
+}
+
+main form label {
+  margin: 20px;
+  font-size: 2rem;
+}
+
+main form #input_title {
+  width: 30%;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  padding: 20px;
+}
+
+main form #input_body {
+  width: 80%;
+  height: 100px;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  padding: 20px;
+}
+
+main #create_btn {
+  width: 20%;
+  padding: 10px;
+}
+
+footer {
+  width: 80%;
+  height: 10%;
+  background-color: #6cb2eb;
+}
+
+footer ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  list-style: none;
+  align-items: center;
+}
+
+footer ul li {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+footer ul li a {
+  text-decoration: none;
+  margin: 20px;
+  font-size: 1.4rem;
+  color: green;
+  text-transform: capitalize;
+}
+
+footer ul li a:hover {
+  color: #011941;
+  text-decoration: none;
+  border-bottom: 4px solid #011941;
+  transform: scale(1.15);
+  transition: ease-in-out 1s;
+}
+
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -10955,137 +11143,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100%;
+  height: 100vh;
   width: 100vw;
-}
-
-body header {
-  width: 80%;
-  flex-basis: 10%;
-}
-
-body header ul {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  list-style: none;
-}
-
-body header ul li {
-  width: 100%;
-}
-
-body header ul li a {
-  text-decoration: none;
-  margin: 20px;
-  font-size: 1.4rem;
-  color: green;
-  text-transform: capitalize;
-}
-
-body header ul li a:hover {
-  color: #011941;
-  text-decoration: none;
-  border-bottom: 4px solid #011941;
-  transform: scale(1.15);
-  transition: ease-in-out 1s;
-}
-
-body main {
-  width: 80%;
-  flex-basis: 70%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-
-body main h1 {
-  padding: 20px;
-}
-
-body main table {
-  width: 100%;
-  height: 100%;
-}
-
-body main table tr {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-body main table .id {
-  width: 2%;
-}
-
-body main table .title {
-  width: 10%;
-  padding: 10px;
-}
-
-body main table .body {
-  width: 50%;
-  padding: 10px;
-}
-
-body main table .created {
-  width: 10%;
-  padding: 10px;
-}
-
-body main table .created {
-  width: 10%;
-  padding: 10px;
-}
-
-body main table .action {
-  width: 18%;
-  padding: 10px;
-  display: flex;
-  justify-content: space-around;
-}
-
-body main table .action button {
-  padding: 8px;
-}
-
-body main table .action form {
-  width: 25%;
-}
-
-body main form {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  justify-content: space-around;
-}
-
-body main form label {
-  margin: 20px;
-  font-size: 2rem;
-}
-
-body main form #input_title {
-  width: 30%;
-  margin-top: 10px;
-  margin-bottom: 40px;
-  padding: 20px;
-}
-
-body main form #input_body {
-  width: 80%;
-  height: 100px;
-  margin-top: 10px;
-  margin-bottom: 40px;
-  padding: 20px;
-}
-
-body main #create_btn {
-  width: 20%;
-  padding: 10px;
+  background-color: bisque;
 }
 
 body .active {
@@ -11093,7 +11153,7 @@ body .active {
   border-bottom: 4px solid #011941;
 }
 
-.card {
+body .card {
   padding: 20px;
 }
 

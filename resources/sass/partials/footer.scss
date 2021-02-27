@@ -1,0 +1,33 @@
+footer{
+    width: 80%;
+    height: 10%;
+    background-color: $cyan;
+    ul{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        list-style: none;
+        align-items: center;
+        li{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            a{
+                text-decoration: none;
+                margin: 20px;
+                font-size: 1.4rem;
+                color: green;
+                text-transform: capitalize;
+                &:hover{
+                    color: $bars_color;
+                    text-decoration: none;
+                    border-bottom: 4px solid $bars_color;
+                    transform: scale(1.15);
+                    transition: ease-in-out 1s;
+                } 
+            }
+        }
+    }
+}
