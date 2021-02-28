@@ -48,6 +48,9 @@ main{
         .updated{
             width: 10%;
         }
+        .tag{
+            width: 10%;
+        }
         .action{
             width: 18%;
             display: flex;
@@ -130,6 +133,7 @@ main{
             width: 60%;
             display: flex;
             flex-direction: column;
+            align-items: center;
         }
         aside{
             width: 30%;
