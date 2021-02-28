@@ -1,8 +1,8 @@
 <template>
     <div class="card_container">
         <div class="card" v-for="category in categories" :key="category.id">
-            <div class="card-header">TITLE : {{category.title}}</div>
-            <div class="card-body">ID : {{category.id}}</div>
+            <div class="card_head">TITLE : {{category.title}}</div>
+            <div class="card_body">ID : {{category.id}}</div>
         </div>
     </div>
 </template>

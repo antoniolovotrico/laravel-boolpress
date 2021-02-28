@@ -1,5 +1,5 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap');
 
 // Partials
 @import 'partials/variables';
@@ -8,8 +8,7 @@
 @import 'partials/footer';
 @import 'partials/template';
 
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
+
 
 //Sass
 *{
@@ -18,7 +17,7 @@
     box-sizing: border-box;
 }
 body{
-    font-family: 'nunito','sanserif';
+    font-family: 'Open Sans', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;

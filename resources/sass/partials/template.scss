@@ -10,6 +10,20 @@
             margin: 20px;
             width: 20%;
             min-width: 200px;
+            border-radius: 5%;
+            background-color: lightblue;
+            .card_head{
+                background-color: lightblue;
+                color: white;
+                padding: 10px;
+                border-radius: 5%;
+            }
+            .card_body{
+                background-color: wheat;
+                color: black;
+                padding: 10px;
+
+            }
         }
     }
 }

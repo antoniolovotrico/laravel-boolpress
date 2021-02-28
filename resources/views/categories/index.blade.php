@@ -4,6 +4,8 @@ categories
 @endsection
 @section('main_content')
 <h1>Categories</h1>
+
+<a href="{{ route('categories.create') }}"><button id="create_btn">New Category</button></a>
 <table>
     <thead>
         <tr>
@@ -39,7 +41,4 @@ categories
         @endforeach
     </tbody>
 </table>
-        
-
-<a href="{{ route('categories.create') }}"><button id="create_btn">New Category</button></a>
 @endsection

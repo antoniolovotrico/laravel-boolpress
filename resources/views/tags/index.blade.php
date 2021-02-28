@@ -3,9 +3,9 @@
 tags
 @endsection
 @section('main_content')
-<div class="main_container">
-   <h1>Tags</h1>
-   
+<h1>Tags</h1>
+
+<a href="{{ route('tags.create') }}"><button id="create_btn">New Tag</button></a>
        
    <table>
       <thead>
@@ -41,8 +41,4 @@ tags
           @endforeach
       </tbody>
   </table>
-          
-  
-  <a href="{{ route('tags.create') }}"><button id="create_btn">New Tag</button></a>
-</div>
 @endsection

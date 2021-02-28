@@ -1,10 +1,10 @@
 <template>
     <div class="card_container">
         <div class="card" v-for="article in articles" :key="article.id">
-            <div class="card-header">TITLE : {{article.title}}</div>
-            <div class="card-body">AUTHOR : {{article.author}}</div>
-            <div class="card-header">BODY : {{article.body}}</div>
-            <div class="card-body">Category : {{article.category_name}}</div>
+            <div class="card_head">TITLE : {{article.title}}</div>
+            <div class="card_body">AUTHOR : {{article.author}}</div>
+            <div class="card_head">BODY : {{article.body}}</div>
+            <div class="card_body">Category : {{article.category_name}}</div>
         </div>
     </div>
 </template>

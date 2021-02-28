@@ -37737,19 +37737,19 @@ var render = function() {
     { staticClass: "card_container" },
     _vm._l(_vm.articles, function(article) {
       return _c("div", { key: article.id, staticClass: "card" }, [
-        _c("div", { staticClass: "card-header" }, [
+        _c("div", { staticClass: "card_head" }, [
           _vm._v("TITLE : " + _vm._s(article.title))
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "card-body" }, [
+        _c("div", { staticClass: "card_body" }, [
           _vm._v("AUTHOR : " + _vm._s(article.author))
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "card-header" }, [
+        _c("div", { staticClass: "card_head" }, [
           _vm._v("BODY : " + _vm._s(article.body))
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "card-body" }, [
+        _c("div", { staticClass: "card_body" }, [
           _vm._v("Category : " + _vm._s(article.category_name))
         ])
       ])
@@ -37784,11 +37784,11 @@ var render = function() {
     { staticClass: "card_container" },
     _vm._l(_vm.categories, function(category) {
       return _c("div", { key: category.id, staticClass: "card" }, [
-        _c("div", { staticClass: "card-header" }, [
+        _c("div", { staticClass: "card_head" }, [
           _vm._v("TITLE : " + _vm._s(category.title))
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "card-body" }, [
+        _c("div", { staticClass: "card_body" }, [
           _vm._v("ID : " + _vm._s(category.id))
         ])
       ])
@@ -37823,11 +37823,11 @@ var render = function() {
     { staticClass: "card_container" },
     _vm._l(_vm.tags, function(tag) {
       return _c("div", { key: tag.id, staticClass: "card" }, [
-        _c("div", { staticClass: "card-header" }, [
+        _c("div", { staticClass: "card_head" }, [
           _vm._v("TITLE : " + _vm._s(tag.title))
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "card-body" }, [
+        _c("div", { staticClass: "card_body" }, [
           _vm._v("ID : " + _vm._s(tag.id))
         ])
       ])
