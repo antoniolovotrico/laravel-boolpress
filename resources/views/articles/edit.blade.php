@@ -10,8 +10,14 @@ Edit Article
             <div class="draw_container">
                 <label for="title">Title</label>
                 <input id="input_title" type="text" name="title" value="{{ $article -> title }}">
+                @error('title')
+                    <div class="error_field_required">{{ $message }}</div>
+                @enderror
                 <label for="body">Body</label>
                 <textarea cols="30" rows="10" id="input_body" type="text" name="body">{{ $article -> body }}</textarea>
+                @error('body')
+                    <div class="error_field_required">{{ $message }}</div>
+                @enderror
             </div>
             <aside>
                 <div>
@@ -22,14 +28,21 @@ Edit Article
                         @endforeach
                     </select>
                 </div>
+                @error('category_id')
+                    <div class="error_field_required">{{ $message }}</div>
+                @enderror
                 <div>
                     <label for="tags">Tags</label>
-                    <select name="tags" id="tags" multiple>
+                    <select name="tags" id="tags[]" multiple>
                         @foreach ($tags as $tag)
                             <option value="{{ $tag -> id }}">{{ $tag -> title }}</option>    
                         @endforeach
                     </select>
                 </div>
+                @error('tags')
+                    <div class="error_field_required">{{ $message }}</div>
+                @enderror
+                
                 <div>
                     <button id="create_btn" type="submit">Edit</button>
                 </div>

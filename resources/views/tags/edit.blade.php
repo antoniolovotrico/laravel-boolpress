@@ -12,5 +12,8 @@ Edit Tag
                 <input id="input_title" type="text" name="title" value="{{ $tag -> title }}">
                 <button id="create_btn" type="submit">Edit</button>
             </div>
+            @error('title')
+                <div class="error_field_required">{{ $message }}</div>
+            @enderror
         </form>
 @endsection
