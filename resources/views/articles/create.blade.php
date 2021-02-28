@@ -2,6 +2,9 @@
 @section('title')
 New Article
 @endsection
+@section('admin_bar')
+    @include('layouts.admin_bar')
+@endsection
 @section('main_content')
         <h1>Write a New Article</h1>
         <form class="form_container" action="{{ route('articles.store')}}" method="post">

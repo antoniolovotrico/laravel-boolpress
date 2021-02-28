@@ -18,6 +18,10 @@ class PageController extends Controller
         $menu_link = config('nav_menu_links');
         return view('contact', compact('menu_link'));
     }
+    public function admin(){
+        $menu_link = config('nav_menu_links');
+        return view('admin', compact('menu_link'));
+    }
     public function articles_api(){
         $menu_link = config('nav_menu_links');
         return view('spa.articles', compact('menu_link'));

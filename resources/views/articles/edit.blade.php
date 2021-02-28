@@ -2,6 +2,9 @@
 @section('title')
 Edit Article
 @endsection
+@section('admin_bar')
+    @include('layouts.admin_bar')
+@endsection
 @section('main_content')
 <h1>Edit {{ $article -> title }}</h1>
         <form class="form_container" action="{{ route('articles.update', ['article'=> $article -> id])}}" method="post">

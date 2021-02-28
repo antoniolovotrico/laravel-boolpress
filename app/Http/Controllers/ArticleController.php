@@ -48,7 +48,8 @@ class ArticleController extends Controller
             'title' => 'required',
             'body' => 'required',
             'category_id' => 'required',
-            'tag' => 'exists:tags, id'
+            // 'tag' => 'exists:tags, id'
+            // 'tag_id' => 'required'
         ]);
 
            
@@ -105,7 +106,7 @@ class ArticleController extends Controller
             'title' => 'required',
             'body' => 'required',
             'category_id' => 'required',
-            'tag' => 'exists:tags, id'
+            // 'tag' => 'required'
         ]);
         // $data = $request -> all();
         $article -> update($validated_data);

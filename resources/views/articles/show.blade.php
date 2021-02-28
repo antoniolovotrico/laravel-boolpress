@@ -2,6 +2,9 @@
 @section('title')
 Show Article
 @endsection
+@section('admin_bar')
+    @include('layouts.admin_bar')
+@endsection
 @section('main_content')
 <h1>Show Article</h1>   
 <table>
@@ -23,7 +26,7 @@ Show Article
             <td class="created">{{ $article -> created_at  }}</td>
             <td class="category">Category:{{ $article -> category ?$article->category->title : 'N/A' }}</td>
             <td class="tag">Tag:
-                {{-- seci sono tag mostrami i tag --}}
+                {{-- se ci sono tag mostrami i tag --}}
                 @if (count($article -> tags) > 0)
                     @foreach ($article -> tags as $tag)
                     {{ $tag -> title }}    

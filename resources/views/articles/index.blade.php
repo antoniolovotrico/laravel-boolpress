@@ -2,6 +2,9 @@
 @section('title')
 articles
 @endsection
+@section('admin_bar')
+    @include('layouts.admin_bar')
+@endsection
 @section('main_content')
 <h1>Articles</h1>
 

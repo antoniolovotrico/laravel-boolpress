@@ -1,9 +1,16 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap');
 
+// Fontawesome Caveat
+@import  "node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import  "node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
+@import  "node_modules/@fortawesome/fontawesome-free/scss/regular.scss";
+@import  "node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
+
 // Partials
 @import 'partials/variables';
 @import 'partials/header';
+@import 'partials/admin_bar';
 @import 'partials/main';
 @import 'partials/footer';
 @import 'partials/template';

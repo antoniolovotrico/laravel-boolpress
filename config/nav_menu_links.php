@@ -9,5 +9,8 @@ return [
     ],
     [
         "name" => "contact"
+    ],
+    [
+        "name" => "admin"
     ]
 ];

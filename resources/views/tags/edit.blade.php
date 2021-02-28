@@ -2,6 +2,9 @@
 @section('title')
 Edit Tag
 @endsection
+@section('admin_bar')
+    @include('layouts.admin_bar')
+@endsection
 @section('main_content')
 <h1>Edit {{ $tag -> title }}</h1>
         <form class="form_container" action="{{ route('tags.update', ['tag'=> $tag -> id])}}" method="post">
